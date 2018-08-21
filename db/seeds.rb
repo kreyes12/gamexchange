@@ -12,32 +12,54 @@ UserGame.destroy_all
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-<<<<<<< HEAD
 
-consoles = Console.create([{name: "PlayStation 2", company: "Sony", year_released: 2000}, {name: "Xbox 360", company: "Microsoft", year_released: 2005}, {name: "Nintento Wii", company: "Nintendo", year_released: "2006"}])
+consoles = Console.create([
+  {name: "PlayStation 2", company: "Sony", year_released: 2000},
+  {name: "Xbox 360", company: "Microsoft", year_released: 2005},
+  {name: "Nintento Wii", company: "Nintendo", year_released: "2006"},
+  {name: "GameCube", company: "Nintendo", year_released: 2001},
+  {name: "Xbox", company: "Microsoft", year_released: 2001},
+  {name: "PlayStation 3", company: "Sony", year_released: 2006},
+  {name: "Wii U", company: "Nintendo", year_released: 2012},
+  {name: "PlayStation 4", company: "Sony", year_released: 2013},
+  {name: "Xbox One", company: "Microsoft", year_released: 2013} ])
 puts Console.all.length
-genres = Genre.create([{name: "Action Role-Playing Game (RPG)"}, {name: "Fantasy"}, {name: "Racing"}, {name: "Turn-based Strategy (TBS)"}, {name: "Action-Adventure"}])
+
+genres = Genre.create([
+  {name: "Action Role-Playing Game (RPG)"},
+  {name: "Fantasy"},
+  {name: "Racing"},
+  {name: "Turn-based Strategy (TBS)"},
+  {name: "Action-Adventure"},
+  {name: "Action"},
+  {name: "Platform"},
+  {name: "Fighting"},
+  {name: "Rhythm"},
+  {name: "Survival Horror"},
+  {name: "MMORPG"}])
+
+
+
 puts Genre.all.length
 
-games = Game.create([{title: "Grand Theft Auto: San Andreas", year_released: 2004 , genre_id: 5}, {title: "Mario Kart Wii", year_released: 2008, genre_id: 3}, {title: "Fallout 3", year_released: 2008, genre_id: 1}])
+games = Game.create([
+  {title: "Grand Theft Auto: San Andreas", year_released: 2004 , genre_id: 5},
+  {title: "Mario Kart Wii", year_released: 2008, genre_id: 3},
+  {title: "Fallout 3", year_released: 2008, genre_id: 1},
+  {title: "Ape Escape 2", year_released: 2002, genre_id: 5},
+  {title: "The Legend of Zelda: The Wind Waker", year_released: 2002, genre_id: 5}])
 puts Game.all.length
 
-game_consoles = GameConsole.create([{game_id: 1, console_id: 1}, {game_id: 2, console_id: 3}, {game_id: 3, console_id: 2}])
+game_consoles = GameConsole.create([{game_id: 1, console_id: 1},
+  {game_id: 2, console_id: 3},
+  {game_id: 3, console_id: 2},
+  {game_id: 4, console_id: 1},
+  {game_id: 5, console_id: 4}])
 
-users = User.create([{name: "Sora", bio: "keyblade wielder and upbeat teenager"}, {name: "Luigi", bio: "good-natured plumber"}])
+users = User.create([
+  {name: "Sora", bio: "keyblade wielder and upbeat teenager"},
+  {name: "Luigi", bio: "good-natured plumber"},
+  {name: "Link", bio: "ocarina player and explorer"},
+  {name: "Commander Shepard", bio: "veteran soldier of the Systems Alliance Navy military and N-7 graduate of the ICT program"}])
 
-user_games = UserGame.create([{user_id: 1, game_id: 1}, {user_id: 2, game_id: 2}])
-=======
-new_user = User.new
-
-new_user.name = "sam"
-new_user.bio = "my bio"
-
-File.open('./app/assets/images/defaultAvatar.jpg') do |f|
-
-  new_user.avatar = f
-
-end
-
-new_user.save
->>>>>>> 0c45fbff4b067e65609c2f316071d0b9d456a099
+user_games = UserGame.create([{user_id: 1, game_id: 1}, {user_id: 2, game_id: 2}, {user_id: 3, game_id: 1}])
