@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+new_user = User.new
+
+new_user.name = "sam"
+new_user.bio = "my bio"
+
+File.open('./app/assets/images/defaultAvatar.jpg') do |f|
+
+  new_user.avatar = f
+
+end
+
+new_user.save
