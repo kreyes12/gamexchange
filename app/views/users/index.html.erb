@@ -1,5 +1,7 @@
 <h1 class="small-12 columns">All Users</h1>
 
 <% @users.each do |user| %>
-<li><%= user.name %></li>
+  <div class="index_profile small-12 large-4 columns">
+  <img src="<%= user.avatar %>"><%= link_to user.name, user_path(user) %>
+</div>
 <% end %>
