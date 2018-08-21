@@ -1,1 +1,1 @@
-<img src=<%= @user.avatar.url %> />
+<img src=<%= @user.avatar.file.nil? ? default_avatar_path : @user.avatar.url %> />

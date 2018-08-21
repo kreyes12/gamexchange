@@ -12,7 +12,7 @@ UserGame.destroy_all
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-<<<<<<< HEAD
+
 
 consoles = Console.create([{name: "PlayStation 2", company: "Sony", year_released: 2000}, {name: "Xbox 360", company: "Microsoft", year_released: 2005}, {name: "Nintento Wii", company: "Nintendo", year_released: "2006"}])
 puts Console.all.length
@@ -27,17 +27,3 @@ game_consoles = GameConsole.create([{game_id: 1, console_id: 1}, {game_id: 2, co
 users = User.create([{name: "Sora", bio: "keyblade wielder and upbeat teenager"}, {name: "Luigi", bio: "good-natured plumber"}])
 
 user_games = UserGame.create([{user_id: 1, game_id: 1}, {user_id: 2, game_id: 2}])
-=======
-new_user = User.new
-
-new_user.name = "sam"
-new_user.bio = "my bio"
-
-File.open('./app/assets/images/defaultAvatar.jpg') do |f|
-
-  new_user.avatar = f
-
-end
-
-new_user.save
->>>>>>> 0c45fbff4b067e65609c2f316071d0b9d456a099
