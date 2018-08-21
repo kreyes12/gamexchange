@@ -4985,3 +4985,19 @@ a.thumbnail {
 
 .long-delay {
   animation-delay: 700ms !important; }
+
+
+
+
+
+
+.index_profile img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.background {
+  background-color: #f5f5f5;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
