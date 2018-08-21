@@ -1,6 +1,8 @@
 
 <h1 class="small-12 columns">All Consoles</h1>
 
+<ul>
 <% @consoles.each do |console| %>
-<li><%= console.name %></li>
+<li><%= link_to console.name, console_path(console) %></li>
 <% end %>
+</ul>

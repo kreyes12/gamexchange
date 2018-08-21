@@ -36,7 +36,8 @@ genres = Genre.create([
   {name: "Fighting"},
   {name: "Rhythm"},
   {name: "Survival Horror"},
-  {name: "MMORPG"}])
+  {name: "MMORPG"},
+  {name: "Sports"}])
 
 
 
@@ -47,19 +48,29 @@ games = Game.create([
   {title: "Mario Kart Wii", year_released: 2008, genre_id: 3},
   {title: "Fallout 3", year_released: 2008, genre_id: 1},
   {title: "Ape Escape 2", year_released: 2002, genre_id: 5},
-  {title: "The Legend of Zelda: The Wind Waker", year_released: 2002, genre_id: 5}])
+  {title: "The Legend of Zelda: The Wind Waker", year_released: 2002, genre_id: 5},
+  {title: "The Elder Scrolls V: Skyrim", year_released: 2011, genre_id: 1},
+  {title: "Fifa 18", year_released: 2017, genre_id: 12},
+  {title: "Assassin's Creed: Origins", year_released: 2017, genre_id: 5},
+  {title: "Crash Nitro Kart", year_released: 2003, genre_id: 3}])
 puts Game.all.length
 
-game_consoles = GameConsole.create([{game_id: 1, console_id: 1},
+game_consoles = GameConsole.create([
+  {game_id: 1, console_id: 1},
   {game_id: 2, console_id: 3},
   {game_id: 3, console_id: 2},
   {game_id: 4, console_id: 1},
-  {game_id: 5, console_id: 4}])
+  {game_id: 5, console_id: 4},
+  {game_id: 6, console_id: 6},
+  {game_id: 6, console_id: 2},
+  {game_id: 9, console_id: 1},
+  {game_id: 9, console_id: 4},
+  {game_id: 9, console_id: 5}])
 
 users = User.create([
   {name: "Sora", bio: "keyblade wielder and upbeat teenager"},
-  {name: "Luigi", bio: "good-natured plumber"},
-  {name: "Link", bio: "ocarina player and explorer"},
-  {name: "Commander Shepard", bio: "veteran soldier of the Systems Alliance Navy military and N-7 graduate of the ICT program"}])
+  {name: "Luigi", bio: "good-natured plumber"}])
+#  {name: "Link", bio: "ocarina player and explorer"},
+#  {name: "Commander Shepard", bio: "veteran soldier of the Systems Alliance Navy military and N-7 graduate of the ICT program"}])
 
 user_games = UserGame.create([{user_id: 1, game_id: 1}, {user_id: 2, game_id: 2}, {user_id: 3, game_id: 1}])
