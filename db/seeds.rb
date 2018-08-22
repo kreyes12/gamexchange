@@ -75,4 +75,4 @@ users = User.create([
   {name: "Chun-Li", bio: "expert martial artist and Interpol officer; first female fighter"},
   {name: "Doctor Neo Cortex", bio: "scientist pursuing world domination"}])
 
-user_games = UserGame.create([{user_id: 1, game_id: 1}, {user_id: 2, game_id: 2}, {user_id: 3, game_id: 1}])
+user_games = UserGame.create([{user_id: 1, game_id: 1}, {user_id: 2, game_id: 2}, {user_id: 3, game_id: 1}, {user_id: 4, game_id: 4}, {user_id: 5, game_id: 5}, {user_id: 6, game_id: 3}])
