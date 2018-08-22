@@ -8,5 +8,8 @@ class GenresController < ApplicationController
     @genre = Genre.find_by_id(params[:id])
   end
 
-  
+
+
+
+
 end

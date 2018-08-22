@@ -1,0 +1,6 @@
+<h1><%= @game.title %></h1>
+
+Consoles: <% @game.consoles.each do |console| %>
+          <li><%= console.name %></li>
+          <% end %><br>
+Year Released: <%= @game.year_released %>
