@@ -70,7 +70,7 @@ game_consoles = GameConsole.create([
 users = User.create([
   {name: "Sora", bio: "keyblade wielder and upbeat teenager"},
   {name: "Luigi", bio: "good-natured plumber"}])
-#  {name: "Link", bio: "ocarina player and explorer"},
-#  {name: "Commander Shepard", bio: "veteran soldier of the Systems Alliance Navy military and N-7 graduate of the ICT program"}])
+  {name: "Link", bio: "ocarina player and explorer"},
+  {name: "Commander Shepard", bio: "veteran soldier of the Systems Alliance Navy military and N-7 graduate of the ICT program"}])
 
 user_games = UserGame.create([{user_id: 1, game_id: 1}, {user_id: 2, game_id: 2}, {user_id: 3, game_id: 1}])

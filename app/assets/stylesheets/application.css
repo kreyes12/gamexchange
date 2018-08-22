@@ -4998,6 +4998,10 @@ a.thumbnail {
   border-radius: 12px;
 }
 
+.profile img {
+  padding-top: 1rem;
+}
+
 .background {
   background-color: #f5f5f5;
   margin-top: 2rem;
@@ -5009,4 +5013,9 @@ a.thumbnail {
 .index_profile .background {
   padding-top: 1rem;
   padding-left: 1rem;
+}
+
+.back_button {
+  margin-top: 1rem;
+  
 }

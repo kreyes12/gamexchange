@@ -2,7 +2,7 @@
   <h1 class="columns">Player Profile</h1>
 </div>
 <div class="row background">
-  <div class="small-12 large-4 columns">
+  <div class="profile small-12 large-4 columns">
     <img src=<%= @user.avatar.file.nil? ? default_avatar_path : @user.avatar.url %> />
   </div>
   <div class="small-12 large-8 columns">
@@ -15,5 +15,7 @@
       <% end %>
     <a class="button" href="#">Add Game</a>
   </div>
-
+</div>
+<div class="row back_button">
+  <div class="button"> <%= link_to "Back to all players", users_path %></div>
 </div>

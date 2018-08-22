@@ -3,4 +3,8 @@
 Consoles: <% @game.consoles.each do |console| %>
           <li><%= console.name %></li>
           <% end %><br>
-Year Released: <%= @game.year_released %>
+Year Released: <%= @game.year_released %></br>
+Players with this game: <% @game.users.each do |player| %>
+<%= link_to player.name, user_path(player.id) %>
+<% end %></br>
+<%= link_to "View all games", games_path %>
