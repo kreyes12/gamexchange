@@ -2,6 +2,9 @@
 
 <ul>
 <% @genres.each do |genre| %>
-<li><%= genre.name %></li>
+<li><%= genre.name %><br><% genre.games.each do |game| %>
+  <%= link_to game.title, game_path(game) %>
+</li>
+<% end %>
 <% end %>
 </ul>

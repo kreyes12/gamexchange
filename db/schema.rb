@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_08_23_105751) do
+
 
   create_table "consoles", force: :cascade do |t|
     t.string "name"
@@ -57,6 +59,19 @@ ActiveRecord::Schema.define(version: 2018_08_23_105751) do
     t.datetime "updated_at", null: false
     t.string "avatar"
     t.string "password_digest"
+  end
+
+  create_table "wishlist_games", force: :cascade do |t|
+    t.integer "wishlist_id"
+    t.integer "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wishlists", force: :cascade do |t|
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -1,5 +1,13 @@
 class UserGamesController < ApplicationController
 
+  def index
+    @user_games = UserGame.all
+  end
+
+  def show
+    @user_game = UserGame.find_by_id(params[:id])
+  end
+
   def new
     @user_game = UserGame.new
   end
