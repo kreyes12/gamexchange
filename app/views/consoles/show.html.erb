@@ -3,6 +3,6 @@
 <ul>
 Year Released: <%= @console.year_released %><br>
 Games: <% @console.games.each do |game| %>
-      <li><%= game.title %></li>
+      <li><%= link_to game.title, game_path(game) %></li>
       <% end %>
 </ul>

@@ -1,4 +1,4 @@
-<h1>Add a Game to Our Collection!</h1>
+<h1>Add a Game to Your Collection!</h1>
 
 <%= fields_for :user_game do |user_game_fields| %>
   Game: <%= user_game_fields.collection_select :game_id, Game.all, :id, :title %>
