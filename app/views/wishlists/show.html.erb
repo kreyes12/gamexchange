@@ -1,6 +1,5 @@
 <h1><%= @wishlist.user.name + "\'s Wishlist" %></h1>
 
-<li><% @wishlist.wishlist_games.each do |wishlist_game| %>
-  <%= wishlist_game.game_id %>
-  <% end %>
-</li>
+<% @wishlist.games.each do |game| %>
+<li><%= link_to game.title, game_path(game) %></li>
+<% end %>
