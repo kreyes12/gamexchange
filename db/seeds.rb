@@ -55,7 +55,8 @@ games = Game.create([
   {title: "Assassin's Creed: Origins", year_released: 2017, genre_id: 5},
   {title: "Crash Nitro Kart", year_released: 2003, genre_id: 3},
   {title: "Insane Robots", year_released: 2017, genre_id: 4},
-  {title: "LittleBigPlanet", year_released: 2008, genre_id: 13}])
+  {title: "LittleBigPlanet", year_released: 2008, genre_id: 13},
+  {title: "Final Fantasy X", year_released: }])
 puts Game.all.length
 
 game_consoles = GameConsole.create([
@@ -101,9 +102,14 @@ game_consoles = GameConsole.create([
   # {name: "Chun-Li", bio: "expert martial artist and Interpol officer; first female fighter"},
   # {name: "Doctor Neo Cortex", bio: "scientist pursuing world domination"}])
 
-wishlists = Wishlist.create([{user_id: 1}, {user_id: 2}, {user_id: 3}, {user_id: 4}, {user_id: 5}, {user_id: 6}])
 
-wishlist_games = WishlistGame.create([{wishlist_id: 1, game_id: 9}, {wishlist_id: 1, game_id: 11}, {wishlist_id: 2, game_id: 11}])
+
+wishlist_games = WishlistGame.create([
+  {user_id: 1, game_id: 9},
+  {user_id: 1, game_id: 11},
+  {user_id: 2, game_id: 3},
+  {user_id: 3, game_id: 5},
+  {user_id: 3, game_id: 7}])
 #user_games = UserGame.create([{user_id: 1, game_id: 1, rating: 8}, {user_id: 2, game_id: 2, rating: 4}, {user_id: 3, game_id: 1, rating: 4}, {user_id: 4, game_id: 4, rating: 5}, {user_id: 5, game_id: 5, rating: 9}, {user_id: 6, game_id: 3, rating: 9}])
 
 user_games = UserGame.create([

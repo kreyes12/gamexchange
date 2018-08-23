@@ -26,4 +26,7 @@ class ApplicationController < ActionController::Base
      redirect_to controller: 'application', action: 'hello' unless current_user
    end
 
+
+
+
 end

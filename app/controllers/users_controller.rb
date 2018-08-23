@@ -33,6 +33,10 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def wishlist
+    @user = User.find(params[:id])
+  end
+
 
   private
 

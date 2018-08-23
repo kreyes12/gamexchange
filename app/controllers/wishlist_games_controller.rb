@@ -8,5 +8,18 @@ class WishlistGamesController < ApplicationController
     @wishlist_game = WishlistGame.find_by_id(params[:id])
   end
 
+  def new
+    @wishlist_game = WishlistGame.new
+  end
+
+  def create
+    @wishlist_game = WishlistGame.create(wishlist_game_params)
+  end
+
+private
+
+def wishlist_game_params
+  params.require(:wishlist_game).permit(:user_id, :game_id)
+end
 
 end

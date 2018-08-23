@@ -10,6 +10,10 @@ Rails.application.routes.draw do
    post '/logout' => 'sessions#destroy'
 
   resources :users, only: [:index, :show, :new, :create]
-  resources :wishlists
+  resources :wishlist_games
+
+  get 'users/:id/wishlist' => 'users#wishlist', as: :wishlist
+
+  post '/games/:id/add_to_wishlist' => 'games#add_to_wishlist', as: :add_to_wishlist
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
