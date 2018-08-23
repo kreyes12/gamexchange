@@ -1,10 +1,32 @@
-<h1><%= @game.title %></h1>
-
-Consoles: <% @game.consoles.each do |console| %>
-          <li><%= console.name %></li>
-          <% end %><br>
-Year Released: <%= @game.year_released %></br>
-Players with this game: <% @game.users.each do |player| %>
-<%= link_to player.name, user_path(player.id) %>
-<% end %></br>
+<div class="background row">
+  <h1 class="small-12 columns"><%= @game.title %></h1>
+  <div class="small-12 large-4 columns">
+    <p class="sub">Consoles: <% @game.consoles.each do |console| %></p>
+          <p><%= console.name %></p>
+          <% end %>
+  </div>
+  <div class="small-12 large-4 columns">
+    <p class="sub">Year Released:<p>
+    <p><%= @game.year_released %></p>
+  </div>
+  <div class="small-12 large-4 columns">
+    <p class="sub">Players with this game:</p>
+    <% @game.users.each do |player| %>
+      <p><%= link_to player.name, user_path(player.id) %></p>
+    <% end %>
+  </div>
+  <div class="small-12 columns">
+    <p class="sub">Avarage rating:</p>
+    <% total_ratings = [] %>
+    <% @game.user_games.each do |user_game| %>
+      <% total_ratings << user_game.rating %>
+    <% end %></br>
+    <% average_ratings = total_ratings.inject{ |sum, el| sum + el }.to_i / total_ratings.size %>
+    <%= average_ratings %>/5
+      <% average_ratings.times do %>
+      <i class="fas fa-star %>"></i>
+    <% end %>
+  </div>
+</div>
+<div row>
 <%= link_to "View all games", games_path %>
