@@ -1,9 +1,21 @@
 <div class="row">
   <h1 class="small-12 columns">All Games</h1>
+    <% total_ratings = [] %>
+    <% @games.each do |game| %>
+    <div class="index_profile small-12 large-4 columns">
+      <div class="background">
+        <%= link_to game.title, game_path(game.id) %>
+          <% game.user_games.each do |user_game| %>
+          <% total_ratings << user_game.rating %>
+        <% end %></br>
+        <% average_ratings = total_ratings.inject{ |sum, el| sum + el }.to_i / total_ratings.size %>
+        <%= average_ratings %>/5
+        <% average_ratings.times do %>
+          <i class="fas fa-star %>"></i>
 
-  <ul>
-  <% @games.each do |game| %>
-  <li><%= link_to game.title, game_path(game.id) %></li>
-  <% end %>
-  </ul>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+
 </div

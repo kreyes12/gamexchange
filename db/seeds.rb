@@ -68,27 +68,27 @@ game_consoles = GameConsole.create([
   {game_id: 9, console_id: 5}])
 
 # users
-  sora = User.new(name: "Sora", bio: "keyblade wielder and upbeat teenager")
+  sora = User.new(name: "Sora", bio: "Keyblade wielder and upbeat teenager")
   f = File.open('app/assets/images/sora.jpg')
   sora.avatar = f
   sora.save
 
-  luigi = User.new(name: "Luigi", bio: "good-natured plumber")
+  luigi = User.new(name: "Luigi", bio: "Good-natured Plumber")
   f = File.open('app/assets/images/luigi.jpg')
   luigi.avatar = f
   luigi.save
 
-  commandar = User.new(name: "Commander Shepard", bio: "veteran soldier of the Systems Alliance Navy military and N-7 graduate of the ICT program")
+  commandar = User.new(name: "Commander Shepard", bio: "Veteran soldier of the Systems Alliance Navy military and N-7 graduate of the ICT program")
   f = File.open('app/assets/images/shepard.jpg')
   commandar.avatar = f
   commandar.save
 
-  chun = User.new(name: "Chun-Li", bio: "expert martial artist and Interpol officer; first female fighter")
+  chun = User.new(name: "Chun-Li", bio: "Expert martial artist and Interpol officer; first female fighter")
   f = File.open('app/assets/images/chun.jpg')
   chun.avatar = f
   chun.save
 
-  doctor = User.new(name: "Doctor Neo Cortex", bio: "scientist pursuing world domination")
+  doctor = User.new(name: "Doctor Neo Cortex", bio: "Scientist pursuing world domination")
   f = File.open('app/assets/images/doctor.jpg')
   doctor.avatar = f
   doctor.save
@@ -98,4 +98,24 @@ game_consoles = GameConsole.create([
   # {name: "Chun-Li", bio: "expert martial artist and Interpol officer; first female fighter"},
   # {name: "Doctor Neo Cortex", bio: "scientist pursuing world domination"}])
 
-user_games = UserGame.create([{user_id: 1, game_id: 1}, {user_id: 2, game_id: 2}, {user_id: 3, game_id: 1}, {user_id: 4, game_id: 4}, {user_id: 5, game_id: 5}, {user_id: 6, game_id: 3}])
+#user_games = UserGame.create([{user_id: 1, game_id: 1, rating: 8}, {user_id: 2, game_id: 2, rating: 4}, {user_id: 3, game_id: 1, rating: 4}, {user_id: 4, game_id: 4, rating: 5}, {user_id: 5, game_id: 5, rating: 9}, {user_id: 6, game_id: 3, rating: 9}])
+
+user_games = UserGame.create([
+  {rating: 4, user_id: 1, game_id: 1},
+  {rating: 3, user_id: 2, game_id: 3},
+  {rating: 2, user_id: 3, game_id: 2},
+  {rating: 5, user_id: 4, game_id: 1},
+  {rating: 5, user_id: 5, game_id: 4},
+  {rating: 3, user_id: 1, game_id: 6},
+  {rating: 2, user_id: 2, game_id: 2},
+  {rating: 1, user_id: 3, game_id: 1},
+  {rating: 4, user_id: 4, game_id: 4},
+  {rating: 3, user_id: 5, game_id: 5},
+  {rating: 5, user_id: 1, game_id: 7},
+  {rating: 4, user_id: 2, game_id: 1},
+  {rating: 3, user_id: 3, game_id: 8},
+  {rating: 4, user_id: 4, game_id: 9},])
+
+
+
+puts UserGame.all.length

@@ -7,10 +7,33 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+
   </head>
 
   <body>
-
+    <div class="row">
+      <div class="small-12">
+        <nav class="top-bar">
+            <div class="top-bar-left">
+              <ul class="menu">
+                <li class="menu-text title">Good Game!</li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <ul class="menu">
+                <li><%= link_to "Players", users_path %></li>
+                <li><%= link_to "Games", games_path %></li>
+                <li><%= link_to "Genres", genres_path %></li>
+                <li><%= link_to "Consoles", consoles_path %></li>
+              </ul>
+            </div>
+        </nav>
+      </div>
+  </div>
 
     <%= yield %>
 
