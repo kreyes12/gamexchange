@@ -5,17 +5,10 @@
     <%= form_for @user do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
-<<<<<<< HEAD
       <%= f.label :password %>
       <%= f.password_field :password %>
       <% f.label :password_confirmation %>
       <% f.password_field :password_confirmation %>
-=======
-      <%= f.label :bio %>
-      <%= f.text_area :bio %>
-      <%= f.label "upload picture"%>
-      <%= f.file_field :avatar %>
->>>>>>> 2d0e299b12b03d8d4b66d4539a3fe240d851ad55
       <%= f.submit "Create" %>
     <% end %>
   </div>

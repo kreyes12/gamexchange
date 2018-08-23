@@ -56,7 +56,7 @@ games = Game.create([
   {title: "Crash Nitro Kart", year_released: 2003, genre_id: 3},
   {title: "Insane Robots", year_released: 2017, genre_id: 4},
   {title: "LittleBigPlanet", year_released: 2008, genre_id: 13},
-  {title: "Final Fantasy X", year_released: }])
+  {title: "Final Fantasy X", year_released: 2001, genre_id: 2}])
 puts Game.all.length
 
 game_consoles = GameConsole.create([

@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   resources :consoles, only: [:index, :show]
   resources :games, only: [:index, :show]
   resources :genres, only: [:index]
-  resources :user_games, only: [:new, :edit]
+  resources :user_games
   resources :users
+
+
   root 'application#hello'
    get '/login' => 'sessions#new'
    post '/login' => 'sessions#create'

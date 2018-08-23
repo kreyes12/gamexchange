@@ -5019,6 +5019,10 @@ h2 {
   margin-left: -2rem;
 }
 
+.button {
+  font-weight: bold;
+}
+
 .button a,
 a {
   font-weight: bold;
@@ -5067,4 +5071,23 @@ a {
 
 .fa-star {
   color: #23F0C7
+}
+
+.logged_in {
+  background-color: white;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+  box-shadow: 2px 3px 0px #23F0C7;
+}
+
+.logged_in img {
+  width: 25px;
+  height: 25px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem
+}
+
+label {
+  color: #23F0C7;
 }
