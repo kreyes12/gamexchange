@@ -1,6 +1,12 @@
 <div class="row">
   <h1 class="small-12 columns">All Games</h1>
-    <% total_ratings = [] %>
+  <%= form_tag(games_path, method: "get") do %>
+    <%= label_tag(:query, "Search by Genre:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+
+     <% total_ratings = [] %>
     <% @games.each do |game| %>
     <div class="index_profile small-12 large-4 columns">
       <div class="background">

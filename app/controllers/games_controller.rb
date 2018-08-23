@@ -2,13 +2,14 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
-#  if params[:query]
-#  @games = Game.select {|game| game.genre.name == params[:query]}
-#else
-#  @games = Game.all
-#    end
-#  end
-end
+      if params[:query]
+        @games = Game.select {|game| game.genre.name == params[:query]}
+      else
+        @games = Game.all
+      end
+    end
+
+
 
   def show
     @game = Game.find_by_id(params[:id])
