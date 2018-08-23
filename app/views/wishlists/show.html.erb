@@ -1,1 +1,6 @@
-<h1><%= @wishlist.user.name %></h1>
+<h1><%= @wishlist.user.name + "\'s Wishlist" %></h1>
+
+<li><% @wishlist.wishlist_games.each do |wishlist_game| %>
+  <%= wishlist_game.game_id %>
+  <% end %>
+</li>

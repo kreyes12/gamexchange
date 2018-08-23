@@ -8,6 +8,10 @@ class WishlistGamesController < ApplicationController
     @wishlist_game = WishlistGame.find_by_id(params[:id])
   end
 
-  def game_title
-    @wishli
+  def title
+    Game.all.each do |game|
+      if @wishlist_game.game_id == game.id
+        game.title
+      end
+    end
 end

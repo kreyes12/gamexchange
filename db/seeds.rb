@@ -103,9 +103,9 @@ game_consoles = GameConsole.create([
 
 user_games = UserGame.create([{user_id: 1, game_id: 1}, {user_id: 2, game_id: 2}, {user_id: 3, game_id: 1}, {user_id: 4, game_id: 4}, {user_id: 5, game_id: 5}, {user_id: 6, game_id: 3}, {user_id: 5, game_id: 8}])
 
-sora_wishlist = Wishlist.create([{user_id: 1}])
+sora_wishlist = Wishlist.create([{user_id: 1}, {user_id: 2}])
 
-sora_wishlist_game = WishlistGame.create([{wishlist_id: 1, game_id: 9}])
+sora_wishlist_games = WishlistGame.create([{wishlist_id: 1, game_id: 9}, {wishlist_id: 1, game_id: 11}])
 #user_games = UserGame.create([{user_id: 1, game_id: 1, rating: 8}, {user_id: 2, game_id: 2, rating: 4}, {user_id: 3, game_id: 1, rating: 4}, {user_id: 4, game_id: 4, rating: 5}, {user_id: 5, game_id: 5, rating: 9}, {user_id: 6, game_id: 3, rating: 9}])
 
 user_games = UserGame.create([
