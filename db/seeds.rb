@@ -22,7 +22,9 @@ consoles = Console.create([
   {name: "PlayStation 3", company: "Sony", year_released: 2006},
   {name: "Wii U", company: "Nintendo", year_released: 2012},
   {name: "PlayStation 4", company: "Sony", year_released: 2013},
-  {name: "Xbox One", company: "Microsoft", year_released: 2013} ])
+  {name: "Xbox One", company: "Microsoft", year_released: 2013},
+  {name: "Nintendo 3DS", company: "Nintendo", year_released: 2011},
+  {name: "Nintendo Switch", company: "Nintendo", year_released: 2016} ])
 puts Console.all.length
 
 genres = Genre.create([
@@ -38,7 +40,9 @@ genres = Genre.create([
   {name: "Survival Horror"},
   {name: "MMORPG"},
   {name: "Sports"},
-  {name: "Puzzle"}])
+  {name: "Puzzle"},
+  {name: "Strategy"},
+  {name: "First-Person Shooter"}])
 
 
 
@@ -56,7 +60,9 @@ games = Game.create([
   {title: "Crash Nitro Kart", year_released: 2003, genre_id: 3},
   {title: "Insane Robots", year_released: 2017, genre_id: 4},
   {title: "LittleBigPlanet", year_released: 2008, genre_id: 13},
-  {title: "Final Fantasy X", year_released: 2001, genre_id: 2}])
+  {title: "Final Fantasy X", year_released: 2001, genre_id: 2},
+  {title: "Resident Evil 4", year_released: 2005, genre_id: 10},
+  {title: "Halo 5: Guardians", year_released: 2015, genre_id: 15}])
 puts Game.all.length
 
 game_consoles = GameConsole.create([
@@ -67,9 +73,14 @@ game_consoles = GameConsole.create([
   {game_id: 5, console_id: 4},
   {game_id: 6, console_id: 6},
   {game_id: 6, console_id: 2},
+  {game_id: 7, console_id: 6},
+  {game_id: 7, console_id: 8},
+  {game_id: 8, console_id: 8},
+  {game_id: 8, console_id: 9}
   {game_id: 9, console_id: 1},
   {game_id: 9, console_id: 4},
-  {game_id: 9, console_id: 5}])
+  {game_id: 9, console_id: 5},
+  {game_id: 14, console_id: 9}])
 
 # users
   sora = User.new(name: "Sora", bio: "Keyblade wielder and upbeat teenager", password: "sora")

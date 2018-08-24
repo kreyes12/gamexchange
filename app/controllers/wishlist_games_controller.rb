@@ -16,6 +16,10 @@ class WishlistGamesController < ApplicationController
     @wishlist_game = WishlistGame.create(wishlist_game_params)
   end
 
+  def destroy
+    @wishlist_game.destroy
+  end
+
 private
 
 def wishlist_game_params
