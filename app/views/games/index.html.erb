@@ -1,10 +1,10 @@
 <div class="row">
   <h1 class="small-12 columns">All Games</h1>
-  <%= form_tag(games_path, method: "get") do %>
-    <%= label_tag(:query, "Search by Genre:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-    <% end %>
+  <%= link_to "Search by Genre:", genres_path %> </p>
+  <%= form_tag games_path, :method => 'get' do %>
+  <%= collection_select :game, :genre_id, Genre.all, :id, :name %>
+  <%= submit_tag "search" %>
+  <% end %>
 
      <% total_ratings = [] %>
     <% @games.each do |game| %>
@@ -24,4 +24,4 @@
     </div>
     <% end %>
 
-</div
+</div>
