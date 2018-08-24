@@ -43,6 +43,13 @@ class GamesController < ApplicationController
     available_game.size
   end
 
+  def rate
+    @game = Game.find_by_id(params[:id])
+    UserGame.create({game_id: @game.id, user_id: current_user.id, rating: params[:rating]})
+    redirect_to game_path(@game)
+  end
+
+
 
 
 
