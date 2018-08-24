@@ -22,4 +22,13 @@ class Game < ApplicationRecord
   def game_console
 
   end
+  
+  def available_copies
+    matched_games = UserGame.all.select {|user_game| user_game.game_id == self.id}
+    available_games = matched_games.map {|user_game| user_game.available == true}
+    available_games.size
+  end
+
+
+
 end

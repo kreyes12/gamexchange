@@ -62,7 +62,8 @@ games = Game.create([
   {title: "LittleBigPlanet", year_released: 2008, genre_id: 13},
   {title: "Final Fantasy X", year_released: 2001, genre_id: 2},
   {title: "Resident Evil 4", year_released: 2005, genre_id: 10},
-  {title: "Halo 5: Guardians", year_released: 2015, genre_id: 15}])
+  {title: "Halo 5: Guardians", year_released: 2015, genre_id: 15},
+  {title: "The Beatles: Rock Bank", year_released: 2009, genre_id: 9}])
 puts Game.all.length
 
 game_consoles = GameConsole.create([
@@ -76,7 +77,7 @@ game_consoles = GameConsole.create([
   {game_id: 7, console_id: 6},
   {game_id: 7, console_id: 8},
   {game_id: 8, console_id: 8},
-  {game_id: 8, console_id: 9}
+  {game_id: 8, console_id: 9},
   {game_id: 9, console_id: 1},
   {game_id: 9, console_id: 4},
   {game_id: 9, console_id: 5},
@@ -120,24 +121,28 @@ wishlist_games = WishlistGame.create([
   {user_id: 1, game_id: 11},
   {user_id: 2, game_id: 3},
   {user_id: 3, game_id: 5},
-  {user_id: 3, game_id: 7}])
+  {user_id: 3, game_id: 7},
+  {user_id: 4, game_id: 5},
+  {user_id: 5, game_id: 5}])
 #user_games = UserGame.create([{user_id: 1, game_id: 1, rating: 8}, {user_id: 2, game_id: 2, rating: 4}, {user_id: 3, game_id: 1, rating: 4}, {user_id: 4, game_id: 4, rating: 5}, {user_id: 5, game_id: 5, rating: 9}, {user_id: 6, game_id: 3, rating: 9}])
 
 user_games = UserGame.create([
-  {rating: 5, user_id: 1, game_id: 1},
-  {rating: 3, user_id: 2, game_id: 2},
-  {rating: 2, user_id: 3, game_id: 2},
-  {rating: 5, user_id: 4, game_id: 1},
-  {rating: 5, user_id: 5, game_id: 4},
-  {rating: 1, user_id: 1, game_id: 6},
-  {rating: 2, user_id: 2, game_id: 2},
-  {rating: 1, user_id: 3, game_id: 1},
-  {rating: 4, user_id: 4, game_id: 4},
-  {rating: 1, user_id: 5, game_id: 5},
-  {rating: 5, user_id: 1, game_id: 7},
-  {rating: 4, user_id: 2, game_id: 1},
-  {rating: 3, user_id: 3, game_id: 8},
-  {rating: 4, user_id: 4, game_id: 9}
+  {rating: 5, user_id: 1, game_id: 1, available: true},
+  {rating: 3, user_id: 2, game_id: 2, available: true},
+  {rating: 2, user_id: 3, game_id: 2, available: true},
+  {rating: 5, user_id: 4, game_id: 1, available: true},
+  {rating: 5, user_id: 5, game_id: 4, available: true},
+  {rating: 1, user_id: 1, game_id: 6, available: true},
+  {rating: 2, user_id: 2, game_id: 2, available: true},
+  {rating: 1, user_id: 3, game_id: 1, available: true},
+  {rating: 4, user_id: 4, game_id: 4, available: true},
+  {rating: 1, user_id: 5, game_id: 5, available: true},
+  {rating: 5, user_id: 1, game_id: 7, available: true},
+  {rating: 4, user_id: 2, game_id: 1, available: true},
+  {rating: 3, user_id: 3, game_id: 8, available: true},
+  {rating: 4, user_id: 4, game_id: 9, available: true},
+  {rating: 5, user_id: 2, game_id: 11, available: true},
+  {rating: 3, user_id: 2, game_id: 9, available: true}
   ])
 
 #User.all.sample.id, game_id Game.all.sample.id

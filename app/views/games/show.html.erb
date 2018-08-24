@@ -14,7 +14,9 @@
     <% @game.users.each do |player| %>
       <p><%= link_to player.name, user_path(player.id) %></p>
     <% end %>
+    <p> Number of available copies: <%= @game.available_copies %></p>
   </div>
+    <p> Players who want this game: </p>
   <div class="small-12 columns">
     <p class="sub">Average rating:</p>
     <%= @game.average_rating %>/5
