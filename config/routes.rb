@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   get 'users/:id/wishlist' => 'users#wishlist', as: :wishlist
 
   post '/games/:id/add_to_wishlist' => 'games#add_to_wishlist', as: :add_to_wishlist
+  post '/games/:id/rate' => 'games#rate', as: :rate
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

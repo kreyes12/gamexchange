@@ -18,7 +18,7 @@
   </div>
     <p> Players who want this game: <%= @game.wishlist_games.size %></p>
   <div class="small-12 columns">
-    <p class="sub">Average rating:</p>
+    <p class="sub">Average rating (<%= @game.user_games.count %>):</p>
     <%= @game.average_rating %>/5
     <% if @game.average_rating.is_a? Numeric %>
       <% @game.average_rating.times do %>
@@ -27,6 +27,23 @@
       <% end %>
     <% end %>
   </div>
+  <p> Rate this game: </p>
+  <%= form_tag rate_path(@game) do %>
+  <%= radio_button_tag(:rating, 1) %>
+  <%= label_tag("1") %>
+  <%= radio_button_tag(:rating, 2) %>
+  <%= label_tag("2") %>
+  <%= radio_button_tag(:rating, 3) %>
+  <%= label_tag("3") %>
+  <%= radio_button_tag(:rating, 4) %>
+  <%= label_tag("4") %>
+  <%= radio_button_tag(:rating, 5) %>
+  <%= label_tag("5") %>
+  <%= submit_tag "Rate!" %>
+  <% end %>
+
+
+
 </div>
 <div class="row">
   <%= button_to "Add To Wishlist", add_to_wishlist_path(@game), class: "space button" %>
