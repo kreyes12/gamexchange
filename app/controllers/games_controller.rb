@@ -12,10 +12,22 @@ class GamesController < ApplicationController
       end
   end
 
-
-
   def show
     @game = Game.find_by_id(params[:id])
+  end
+
+  def new
+    @game = Game.new
+  end
+
+  def create
+    @game = Game.new(game_params)
+    if @game.save
+      redirect_to game_path(@game)
+    else
+      flash[:errors] = @game.errors.full_messages
+      render :new
+    end
   end
 
   def add_to_wishlist

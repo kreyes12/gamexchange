@@ -1,8 +1,22 @@
-<h1><%= @console.name %></h1><br>
 
-<ul>
-Year Released: <%= @console.year_released %><br>
-Games: <% @console.games.each do |game| %>
-      <li><%= link_to game.title, game_path(game) %></li>
+<div class="row background">
+  <div class="small-12 columns">
+    <h1><%= @console.name %></h1>
+  </div>
+  <div class="small-12 large-4 columns">
+    <p class="sub">Company: </p>
+    <p><%= @console.company %></p>
+  </div>
+  <div class="small-12 large-4 columns">
+    <p class="sub">Year Released: </p>
+    <p><%= @console.year_released %></p>
+  </div>
+  <div class="small-12 large-4 columns">
+    <p class="sub">Games: <% @console.games.each do |game| %></p>
+    <p><%= link_to game.title, game_path(game) %></p>
       <% end %>
-</ul>
+  </div>
+</div>
+<div class="row">
+  <%= link_to "See all games", games_path, class: "space button" %>
+</div>

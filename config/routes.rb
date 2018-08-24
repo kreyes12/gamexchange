@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :consoles, only: [:index, :show]
-  resources :games, only: [:index, :show]
+  resources :games, only: [:index, :show, :new, :create]
   resources :genres, only: [:index]
   resources :user_games
   resources :users
