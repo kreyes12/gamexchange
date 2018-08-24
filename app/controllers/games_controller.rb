@@ -24,6 +24,15 @@ class GamesController < ApplicationController
     redirect_to wishlist_path(current_user)
   end
 
+  def available_copies
+    matched_games = UserGame.all.select {|user_game| user_game.game_id == @game.id}
+    available_games = matched_games.map {|user_game| user_game.available == true}
+    available_game.size
+  end
+
+
+
+
 end
 
 private

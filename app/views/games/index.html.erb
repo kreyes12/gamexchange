@@ -4,6 +4,7 @@
   <%= form_tag games_path, :method => 'get' do %>
   <%= collection_select :game, :genre_id, Genre.all, :id, :name %>
   <%= submit_tag "search" %>
+  <%= link_to "view all games", games_path %>
   <% end %>
 
      <% total_ratings = [] %>
