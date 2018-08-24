@@ -17,17 +17,16 @@
   </div>
   <div class="small-12 columns">
     <p class="sub">Average rating:</p>
-    <% total_ratings = [] %>
-    <% @game.user_games.each do |user_game| %>
-      <% total_ratings << user_game.rating %>
-    <% end %></br>
-    <% average_ratings = total_ratings.inject{ |sum, el| sum + el }.to_i / total_ratings.size %>
-    <%= average_ratings %>/5
-      <% average_ratings.times do %>
-      <i class="fas fa-star %>"></i>
+    <%= @game.average_rating %>/5
+    <% if @game.average_rating.is_a? Numeric %>
+      <% @game.average_rating.times do %>
+        <i class="fas fa-star %>"></i>
+
+      <% end %>
     <% end %>
   </div>
 </div>
-<div row>
-<%= button_to "Add To Wishlist", add_to_wishlist_path(@game) %>
-<%= link_to "View all games", games_path %>
+<div class="row">
+  <%= button_to "Add To Wishlist", add_to_wishlist_path(@game), class: "space button" %>
+  <%= link_to "View all games", games_path, class: "space button" %>
+</div>

@@ -16,7 +16,7 @@ UserGame.destroy_all
 consoles = Console.create([
   {name: "PlayStation 2", company: "Sony", year_released: 2000},
   {name: "Xbox 360", company: "Microsoft", year_released: 2005},
-  {name: "Nintento Wii", company: "Nintendo", year_released: "2006"},
+  {name: "Nintendo Wii", company: "Nintendo", year_released: 2006},
   {name: "GameCube", company: "Nintendo", year_released: 2001},
   {name: "Xbox", company: "Microsoft", year_released: 2001},
   {name: "PlayStation 3", company: "Sony", year_released: 2006},

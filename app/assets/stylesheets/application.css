@@ -5053,6 +5053,7 @@ a {
 
 .index_profile{
   transition: transform 0.5s;
+
 }
 
 .index_profile:hover {
@@ -5090,4 +5091,9 @@ a {
 
 label {
   color: #23F0C7;
+}
+
+.space {
+  margin-top: 1rem;
+  margin-right: 1rem;
 }
