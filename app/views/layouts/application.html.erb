@@ -35,7 +35,7 @@
       </div>
       <div class="large-4 small-8 logged_in columns">
         <% if current_user %>
-          <img src="<%= current_user.avatar %>">
+        <img src=<%= current_user.avatar.file.nil? ? default_avatar_path : current_user.avatar.url %> />
           Currently logged in as <%= current_user.name %>
           <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
           <input class="button" type=submit value='Logout'>

@@ -20,9 +20,11 @@ class GamesController < ApplicationController
     @game = Game.new
     @consoles = Console.all
   end
-  
+
   def create
     @game = Game.new(game_params)
+
+
     if @game.save
       redirect_to game_path(@game)
     else
@@ -37,7 +39,6 @@ class GamesController < ApplicationController
     redirect_to wishlist_path(current_user)
   end
 
-
   def available_copies
     matched_games = UserGame.all.select {|user_game| user_game.game_id == @game.id}
     available_games = matched_games.map {|user_game| user_game.available == true}
@@ -51,13 +52,10 @@ class GamesController < ApplicationController
   end
 
 
-
-
-
-end
-
 private
 
-def game_params
-  params.require(:game).permit(:title, :year_released, :genre_id)
+  def game_params
+    params.require(:game).permit(:title, :year_released, :genre_id)
+  end
+
 end
