@@ -2,7 +2,7 @@
   <h1 class="small-12 columns"><%= @game.title %></h1>
   <div class="small-12 large-4 columns">
     <p class="sub">Consoles: <% @game.consoles.each do |console| %></p>
-          <p><%= console.name %></p>
+          <p><%= link_to console.name, console_path(console.id) %></p>
           <% end %>
   </div>
   <div class="small-12 large-4 columns">

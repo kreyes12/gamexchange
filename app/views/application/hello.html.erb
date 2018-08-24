@@ -8,8 +8,6 @@
       <%= password_field_tag :password %>
       <input class="button" type=submit value='Login'>
     <% end %>
-
-
-    <div class="button">Create a new account</div>
+    <%= link_to "Create a new account", new_user_path, class: "button" %>
   </div>
 </div>

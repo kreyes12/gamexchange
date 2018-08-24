@@ -18,8 +18,9 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
+    @consoles = Console.all
   end
-
+  
   def create
     @game = Game.new(game_params)
     if @game.save

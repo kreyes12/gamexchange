@@ -1,5 +1,11 @@
-<h1><%= @user.name + "\'s Wishlist" %></h1>
-
-<% @user.desired_games.each do |game| %>
-<li><%= link_to game.title, game_path(game) %></li>
-<% end %>
+<div class="row">
+  <div class="small-12 columns">
+    <h1><%= @user.name + "\'s Wishlist" %></h1>
+    <% @user.desired_games.each do |game| %>
+      <li><%= link_to game.title, game_path(game) %></li>
+    <% end %>
+  </div>
+</div>
+<div class="row back_button">
+  <%= link_to "Back", user_path, class: "button" %>
+</div>

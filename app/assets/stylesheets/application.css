@@ -5097,3 +5097,12 @@ label {
   margin-top: 1rem;
   margin-right: 1rem;
 }
+
+.wish_button {
+display: inline;
+}
+
+.player_title {
+  display: inline;
+  margin-right: 18rem;
+}

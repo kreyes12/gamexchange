@@ -14,8 +14,12 @@ class Game < ApplicationRecord
 
     total_ratings.inject{ |sum, el| sum + el }.to_i / total_ratings.size
   end
+
   def self.search(search)
     where("genre_id LIKE ?", "%#{search}")
   end
 
+  def game_console
+
+  end
 end
